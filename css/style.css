@@ -11,7 +11,9 @@ body{
 	display: block;
 	position: absolute;
 }
-
+/*
+	We start working in the header
+*/
 #header{
 	height: 121px;
 	width: 100%;
@@ -23,6 +25,9 @@ body{
 	border-bottom-color: #DADADA;
 }
 
+/*
+We add the top row
+ */
 #headerTopRow{
 	height: 48px;
 	width: 100%;
@@ -30,79 +35,6 @@ body{
 	display: block;
 	overflow: hidden;
 	padding-top: 20px;
-}
-
-#headerBottomRow{
-	height: 54px;
-	width: 100%;
-	position:relative;
-	display: block;
-	overflow: hidden;
-}
-
-#headerCategoriesContainer{
-	width: 770px;
-	height: 54px;
-}
-
-.categories{
-	display: inline-block;
-	vertical-align: top;
-	height: 54px;
-	width: 60px;
-	position: relative;
-	margin: 0 auto;
-}
-
-.categories:Hover{
-	height: 50px;
-	border-bottom-width: 4px;
-	border-bottom-style: solid;
-	border-bottom-color: #67A1FF;
-}
-
-#categoriesMaps a{
-	padding: 21px 15px 21px 16px;
-}
-
-#categoriesNews a{
-	padding: 21px 15px 21px 15px;
-}
-
-#categoriesMore a{
-	padding: 21px 16px 21px 17px;
-}
-
-#categoriesTools a{
-	padding: 21px 16px 21px 16px;
-}
-
-#categoriesSettings a{
-	padding: 21px 8px 21px 9px;
-}
-
-#categoriesAll a{
-	padding: 21px 23px;
-	position: absolute;
-	color: #4285F4;
-	font-weight: bold;
-}
-
-.categories a{
-	position: absolute;
-	padding: 21px 12px;
-}
-
-#categoriesSettings, #categoriesTools{
-	float: right;
-}
-
-#categoriesAll{
-	height: 50px;
-	border-bottom-width: 4px;
-	border-bottom-style: solid;
-	border-bottom-color: #4285F4;
-	margin-left: 150px;
 }
 
 .headerLogoImage{
@@ -114,7 +46,11 @@ body{
 	float: left;
 }
 
-
+/*
+The way i did the search bar is reaaaaaaally questionable, theres some unaligned stuff
+some problems with mozilla and other stuff, for now it works. Note that i dont use borders,
+this is because i thought the shadows in the original page look so good i just stole em.
+ */
 .searchBar{
 	float: left;
 	width: 620px;
@@ -143,6 +79,10 @@ body{
 	display: inline-block;
 	float: left;
 }
+
+/*
+I do this so theres no weird outline when you select the text field
+ */
 
 .search:focus{
 	outline: none;
@@ -285,4 +225,93 @@ a.headerApps:hover{
 
 .headerUser:hover{
 	background-color: #004A51;
+}
+
+#headerBottomRow{
+	height: 54px;
+	width: 100%;
+	position:relative;
+	display: block;
+	overflow: hidden;
+}
+
+/*	
+	We make a container that starts on the left side of the header
+	and then we align the divs in it using float left with a bit 
+	of margin on the first one, i stole this idea from the way google
+	implements it 
+*/
+
+#headerCategoriesContainer{
+	width: 770px;
+	height: 54px;
+}
+
+.categories{
+	display: inline-block;
+	vertical-align: top;
+	height: 54px;
+	width: 60px;
+	position: relative;
+	margin: 0 auto;
+}
+
+/*
+We add a bit of a hover animation for the mouse over of the categories,
+this is not implemented in the original webpage, but i figured it looks nice
+and its easy to do.
+ */
+.categories:Hover{
+	height: 50px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #67A1FF;
+}
+/*
+This part is an absolute mess, i wish i found a better way to do this, but because
+positioning is not the most important thing right now and it works fine, im just going to stick with it.
+ */
+
+#categoriesMaps a{
+	padding: 21px 15px 21px 16px;
+}
+
+#categoriesNews a{
+	padding: 21px 15px 21px 15px;
+}
+
+#categoriesMore a{
+	padding: 21px 16px 21px 17px;
+}
+
+#categoriesTools a{
+	padding: 21px 16px 21px 16px;
+}
+
+#categoriesSettings a{
+	padding: 21px 8px 21px 9px;
+}
+
+#categoriesAll a{
+	padding: 21px 23px;
+	position: absolute;
+	color: #4285F4;
+	font-weight: bold;
+}
+
+.categories a{
+	position: absolute;
+	padding: 21px 12px;
+}
+
+#categoriesSettings, #categoriesTools{
+	float: right;
+}
+
+#categoriesAll{
+	height: 50px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #4285F4;
+	margin-left: 150px;
 }
