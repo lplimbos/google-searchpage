@@ -13,11 +13,14 @@ body{
 }
 
 #header{
-	height: 96px;
+	height: 121px;
 	width: 100%;
 	position: relative;
-	margin-top: 20px;
 	display: block;
+	background-color: #FAFAFA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #DADADA;
 }
 
 #headerTopRow{
@@ -26,6 +29,80 @@ body{
 	position:relative;
 	display: block;
 	overflow: hidden;
+	padding-top: 20px;
+}
+
+#headerBottomRow{
+	height: 54px;
+	width: 100%;
+	position:relative;
+	display: block;
+	overflow: hidden;
+}
+
+#headerCategoriesContainer{
+	width: 770px;
+	height: 54px;
+}
+
+.categories{
+	display: inline-block;
+	vertical-align: top;
+	height: 54px;
+	width: 60px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.categories:Hover{
+	height: 50px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #67A1FF;
+}
+
+#categoriesMaps a{
+	padding: 21px 15px 21px 16px;
+}
+
+#categoriesNews a{
+	padding: 21px 15px 21px 15px;
+}
+
+#categoriesMore a{
+	padding: 21px 16px 21px 17px;
+}
+
+#categoriesTools a{
+	padding: 21px 16px 21px 16px;
+}
+
+#categoriesSettings a{
+	padding: 21px 8px 21px 9px;
+}
+
+#categoriesAll a{
+	padding: 21px 23px;
+	position: absolute;
+	color: #4285F4;
+	font-weight: bold;
+}
+
+.categories a{
+	position: absolute;
+	padding: 21px 12px;
+}
+
+#categoriesSettings, #categoriesTools{
+	float: right;
+}
+
+#categoriesAll{
+	height: 50px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #4285F4;
+	margin-left: 150px;
 }
 
 .headerLogoImage{
@@ -49,6 +126,7 @@ body{
 	border-radius: 2px;
 	position: relative;
 	margin-left: 20px;
+	background-color: white;
 }
 
 .search{
@@ -194,7 +272,7 @@ a.headerApps:hover{
 	background-color: #0097A7;
 	box-sizing: border-box;
 	position: absolute;
-	top: 7px;
+	top: 26px;
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
