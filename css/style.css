@@ -1,0 +1,210 @@
+body{
+	margin: 0 auto;
+	display: block;
+}
+
+#wrapper{
+	margin: auto auto;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	width: 100%;
+	display: block;
+	position: absolute;
+}
+
+#header{
+	height: 96px;
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+	display: block;
+}
+
+#headerTopRow{
+	height: 48px;
+	width: 100%;
+	position:relative;
+	display: block;
+	overflow: hidden;
+}
+
+.headerLogoImage{
+	background-image: url('../images/googleLogo.png');
+	background-size: 120px 44px;
+	width: 120px;
+	height: 44px;
+	margin: 2px 0 2px 10px;
+	float: left;
+}
+
+
+.searchBar{
+	float: left;
+	width: 620px;
+	height: 42px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-style: none;
+	border-radius: 2px;
+	position: relative;
+	margin-left: 20px;
+}
+
+.search{
+	width: 520px;
+	height: 30px;
+	border-style: none;
+	margin: 8px 8px 8px 10px;
+	font-size: 16px;
+	background: transparent;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	font-family: arial, sans-serif;
+	display: inline-block;
+	float: left;
+}
+
+.search:focus{
+	outline: none;
+}
+
+.googleNowContainer, .googleSearchContainer{
+	width: 24px;
+	height: 38px;
+	margin: 2px 4px;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	position: relative;
+}
+
+.searchForm{
+	width: 0px;
+	height: 0px;
+}
+
+.googleNow{
+	background-image: url('../images/googleNow.png');
+	background-size: 24px 24px;
+	width: 24px;
+	height: 24px;
+	margin: 6px auto;
+	display: block;
+}
+
+.googleNowContainer a{
+	height: 24px;
+	width: 24px;
+	display: block;
+}
+
+.googleSearchButton{
+	background: transparent;
+	height: 30px;
+	width: 24px;
+	display: block;
+	border-style: none;
+	padding: 0 0;
+	position: absolute;
+	top: 5px;
+	cursor: pointer;
+}
+
+.googleSearchIcon{
+	background-image: url('../images/sprites1.png');
+	background-size: 472px 432px;	
+	background-position: -214px -250px;
+	height: 16px;
+	width: 16px;
+	display: block;
+}
+
+#headerNav{
+	float: right;
+	width: 132px;
+	padding: 0px 30px;
+	margin-top: 8px;
+	height: 30px;
+	display: inline-block;
+}
+
+#headerIcons{
+	display: inline-block;
+	height: 30px;
+}
+
+div.headerItem, div.headerNotifContainer, div.headerUserContainer{
+	display: inline-block;
+	padding-left: 15px;
+}
+
+div.headerItemApps{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+a.headerApps{
+	background-image: url("../images/apps.png");
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-top: 6px;
+	opacity: .55;
+}
+
+a.headerApps:hover{
+	opacity: 1;
+}
+
+.headerNotifContainer{
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+}
+
+.headerNotif{
+	background-color: #db4437;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	margin: 4px;
+	border-radius: 50%;
+	padding: 4px 5px 4px 4px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.headerNotif:hover{
+	background-color: #5D1C17;
+}
+
+.headerUserContainer{
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+}
+
+.headerUser{
+	background-color: #0097A7;
+	box-sizing: border-box;
+	position: absolute;
+	top: 7px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	padding: 9px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	font-size: 16px;
+}
+
+.headerUser:hover{
+	background-color: #004A51;
+}
