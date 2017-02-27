@@ -5,6 +5,20 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<title>Google Searchpage</title>
+	<script>
+	// Google Custom Search
+	// https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox
+	(function() {
+		var cx = '';		// TODO: Your Google Search API Key goes on this line.  
+		var gcse = document.createElement('script');
+		gcse.type = 'text/javascript';
+		gcse.async = true;
+		gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+		'//www.google.com/cse/cse.js?cx=' + cx;
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(gcse, s);
+	})();
+	</script>
 </head>
 <body>
 	<div id="wrapper">
@@ -16,15 +30,15 @@
 										the two areas in the header-->
 
 				<div id="headerLogo">
-					<a href="" class="headerLogoImage"></a>
+					<a href="index.html" class="headerLogoImage"></a>
 				</div>
 				
 				<div class="searchBar">	<!--This next code is a little bit questionable in implementation
 											i could have done it a little bit different, especially in the
 											search icon, but i think this works pretty well.-->
-					<form action="./index.html" class="searchForm">
-						<input type="text" name="search" class="search" />
-					</form>
+					<form action="./index.html" id="cse-search-box">
+						<input name="q" type="text" class="search" />
+					
 
 					<div class="googleNowContainer">
 							
@@ -36,12 +50,13 @@
 					</div>
 
 					<div class="googleSearchContainer">
-						<button class="googleSearchButton">
+						<button class="googleSearchButton" type="submit">
 							<span class="googleSearchIcon">
 								
 							</span>
 						</button>
 					</div>
+					</form>
 				</div>
 
 				<div id="headerNav">
@@ -85,6 +100,10 @@
 				</div>
 			</div>
 
+		</div>
+	
+		<div id="searchResults">
+			<gcse:searchresults-only></gcse:searchresults-only>
 		</div>
 
 	</div>

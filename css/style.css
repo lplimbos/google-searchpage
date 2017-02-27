@@ -69,7 +69,7 @@ this is because i thought the shadows in the original page look so good i just s
 	width: 520px;
 	height: 30px;
 	border-style: none;
-	margin: 8px 8px 8px 10px;
+	margin: 5px 8px 8px 10px;
 	font-size: 16px;
 	background: transparent;
 	appearance: none;
@@ -130,13 +130,18 @@ I do this so theres no weird outline when you select the text field
 	cursor: pointer;
 }
 
+.googleSearchButton:focus{
+	outline: none;
+}
+
 .googleSearchIcon{
 	background-image: url('../images/sprites1.png');
 	background-size: 472px 432px;	
 	background-position: -214px -250px;
-	height: 16px;
+	height: 18px;
 	width: 16px;
 	display: block;
+	margin: 4px 3px;
 }
 
 #headerNav{
@@ -302,6 +307,7 @@ positioning is not the most important thing right now and it works fine, im just
 .categories a{
 	position: absolute;
 	padding: 21px 12px;
+	color: #777777;
 }
 
 #categoriesSettings, #categoriesTools{
@@ -315,3 +321,25 @@ positioning is not the most important thing right now and it works fine, im just
 	border-bottom-color: #4285F4;
 	margin-left: 150px;
 }
+
+#searchResults { 
+	margin-left: 126px;
+	max-width: 1700px;			/* totally winging it here! */
+}
+
+/* Styles search results returned from Google Custom Search to match their homepage */
+.gsc-control-cse { padding: 0 !important;}				/* NOT WORKING! */
+.gcsc-branding { display: none;}	
+.gcsc-branding-text { display: none;}					/* get rid of google branding message */
+.gsc-above-wrapper-area { border: none !important;}	/* get rid of border */
+.gsc-orderby { display: none;}						/* Hide this button */
+.gs-visibleUrl { 
+		font-size: 14px; 
+		color: #006621 !important; /* The links in the search results */
+} 
+.gs-snippet  { color: #444 !important;}				/* Match colors of search page */
+.gsc-result-info { color: #999 !important;}
+.gsc-cursor-page { margin-right: 12px;}				/* Make more space for links to 10 search pages at bottom */
+.gsc-cursor-page:first-of-type { margin-left:25%; } /* Push those links to the right from left edge */
+
+
